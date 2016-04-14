@@ -25,11 +25,16 @@ app.use(stylus.middleware (
 ));
 app.use(express.static(__dirname + '/public'));
 
-mongoose.connect('mongodb://localhost/multivision');
+if(env === 'development') {
+    mongoose.connect('mongodb://localhost/tracksportactivities');
+} else {
+//seems to be blocked in accenture network
+    mongoose.connect('mongodb://haralds:haralds@ds013250.mlab.com:13250/tracksportactivities');
+}
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error...'));
 db.once('open', function callback() {
-    console.log('multivision db opened');
+    console.log('tracksportactivities db opened');
 });
 
 var messageSchema = mongoose.Schema({message: String});
@@ -49,6 +54,6 @@ app.get('*', function(req, res) {
     });
 });
 
-var port = 3030;
+var port = process.env.PORT || 3030;
 app.listen(port);
 console.log('Listening on port ' + port + "...");

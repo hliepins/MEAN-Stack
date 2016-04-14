@@ -1,10 +1,14 @@
 {
-  "name": "multivision",
+  "name": "tracksportactivities",
   "version": "1.0.0",
   "description": "Extreme Tech Training",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+      "node": "5.8.x",
+      "npm": "3.7.x"
   },
   "author": "Haralds Liepins",
   "license": "ISC",
