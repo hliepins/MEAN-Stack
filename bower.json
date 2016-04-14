@@ -1,0 +1,26 @@
+{
+  "name": "tracksportactivities",
+  "description": "Extreme Tech Training",
+  "main": "index.js",
+  "authors": [
+    "Haralds Liepins"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "toastr": "^2.1.2",
+    "angular": "^1.5.3",
+    "angular-resource": "^1.5.3",
+    "angular-route": "^1.5.3"
+  }
+}
