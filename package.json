@@ -9,7 +9,12 @@
   "author": "Haralds Liepins",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "express": "^4.13.4",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "mongoose": "^4.4.12",
+    "morgan": "^1.7.0",
+    "nodemon": "latest",
+    "stylus": "^0.54.2"
   }
 }
