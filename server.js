@@ -28,9 +28,9 @@ app.use(express.static(__dirname + '/public'));
 if(env === 'development') {
     mongoose.connect('mongodb://localhost/tracksportactivities');
 } else {
-//seems to be blocked in accenture network
     mongoose.connect('mongodb://haralds:haralds@ds013250.mlab.com:13250/tracksportactivities');
 }
+
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error...'));
 db.once('open', function callback() {
